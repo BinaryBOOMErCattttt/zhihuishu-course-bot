@@ -1,0 +1,20 @@
+{
+  "name": "zhihuishu-course-bot",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A local web GUI bot for watching Zhihuishu shared-course videos and answering quizzes with an LLM.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "zhihuishu",
+    "playwright",
+    "automation",
+    "deepseek"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.64.1"
+  }
+}

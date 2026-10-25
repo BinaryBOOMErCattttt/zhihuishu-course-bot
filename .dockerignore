@@ -1,0 +1,9 @@
+node_modules
+.git
+config.json
+.env
+profile
+data
+shots
+*.log
+*.png

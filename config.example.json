@@ -1,0 +1,17 @@
+{
+  "apiKey": "",
+  "baseUrl": "https://api.deepseek.com",
+  "model": "deepseek-chat",
+  "visionModel": "deepseek-flash",
+  "school": "",
+  "account": "",
+  "password": "",
+  "studyUrl": "",
+  "profileDir": "./profile",
+  "browserChannel": "",
+  "headless": false,
+  "speed": 1,
+  "pageDelayMs": 650,
+  "quizMode": "model",
+  "modelResident": true
+}

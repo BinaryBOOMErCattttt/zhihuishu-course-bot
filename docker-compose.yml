@@ -1,0 +1,21 @@
+services:
+  zhihuishu-bot:
+    build: .
+    container_name: zhihuishu-bot
+    restart: unless-stopped
+    ports:
+      - "4319:4319"
+    environment:
+      HOST: "0.0.0.0"
+      PORT: "4319"
+      HEADLESS: "true"
+      BROWSER_CHANNEL: ""
+      DEEPSEEK_API_KEY: "${DEEPSEEK_API_KEY:-}"
+      STUDY_URL: "${STUDY_URL:-}"
+      PROFILE_DIR: "/app/profile"
+      SPEED: "1"
+    volumes:
+      - ./profile:/app/profile
+      - ./data:/app/data
+      - ./shots:/app/shots
+    shm_size: "1gb"

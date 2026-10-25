@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>智慧树 · 共享课刷课助手</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">安</div>
+      <div class="brand-text">
+        <h1>智慧树</h1>
+        <p>共享课刷课助手</p>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <button class="nav-item active" data-tab="dashboard"><span class="ico">◉</span><span>控制台</span></button>
+      <button class="nav-item" data-tab="courses"><span class="ico">▤</span><span>课程列表</span><b class="nav-count" id="navCount">85</b></button>
+      <button class="nav-item" data-tab="settings"><span class="ico">⚙</span><span>设置</span></button>
+      <button class="nav-item" data-tab="help"><span class="ico">?</span><span>使用说明</span></button>
+    </nav>
+    <div class="side-status">
+      <span class="status-dot" id="sideDot"></span>
+      <div><b id="sideStatus">待启动</b><small id="sideSub">浏览器未连接</small></div>
+    </div>
+    <div class="side-foot">
+      <span>本地运行</span><span>·</span><span>数据不上传</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2 id="tabTitle">控制台</h2>
+        <p id="tabSub">登录一次，剩下的交给脚本</p>
+      </div>
+      <div class="top-actions">
+        <span class="pill" id="statusPill">待启动</span>
+        <button class="ghost sm" id="loginTopBtn">登录</button>
+        <button class="ghost sm" id="refreshBtn">刷新</button>
+      </div>
+    </header>
+
+    <section class="tab active" id="tab-dashboard">
+      <div class="hero card">
+        <div class="ring-wrap">
+          <div class="ring" id="ring" style="--p:0">
+            <div class="ring-inner"><b id="ringDone">0</b><span>/ <i id="ringTotal">85</i></span></div>
+          </div>
+          <div class="ring-label">课程完成度</div>
+        </div>
+        <div class="hero-copy">
+          <div class="eyebrow">LEARNING CONSOLE</div>
+          <h3 id="heroTitle">准备开始</h3>
+          <p id="heroDesc">先启动浏览器。已经登录过的话会直接进入课程页；没有登录会自动打开登录页。</p>
+          <div class="hero-actions">
+            <button class="primary" id="launchBtn">启动浏览器</button>
+            <button class="primary" id="startBtn" disabled>开始刷课</button>
+            <button class="ghost" id="aiStepBtn">AI 接管当前页</button>
+            <button class="ghost" id="pauseBtn" disabled>暂停</button>
+            <button class="danger" id="stopBtn" disabled>停止</button>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="mini"><span>当前课程</span><b id="currentCourse">—</b></div>
+          <div class="mini"><span>运行时长</span><b id="elapsed">00:00</b></div>
+          <div class="mini"><span>决策模型</span><b id="modelName">DeepSeek</b></div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat card"><span>已完成</span><b id="statDone">0</b><small>门课程</small></div>
+        <div class="stat card"><span>待完成</span><b id="statPending">85</b><small>门课程</small></div>
+        <div class="stat card"><span>预计剩余</span><b id="statEta">—</b><small>按当前速度</small></div>
+      </div>
+
+      <div class="two-col">
+        <div class="card current-card">
+          <div class="card-head"><h3>当前画面</h3><span class="muted" id="shotTime">—</span></div>
+          <div class="shot">
+            <img id="shot" src="/api/screenshot" alt="当前浏览器画面">
+            <div class="shot-empty" id="shotEmpty">启动浏览器后显示画面</div>
+          </div>
+          <div class="current-meta" id="currentMeta">浏览器未连接</div>
+        </div>
+        <div class="card log-card">
+          <div class="card-head"><h3>实时日志</h3><button class="tiny" id="clearLogBtn">清屏</button></div>
+          <div class="logs" id="logs"></div>
+          <div class="debug-bar">
+            <input id="debugInput" class="debug-input" placeholder="输入给模型调试，例如：现在为什么停住了？">
+            <button id="debugSend" class="primary sm">发送</button>
+          </div>
+          <div class="debug-answer" id="debugAnswer"></div>
+        </div>
+      </div>
+
+      <div class="card model-card">
+        <div class="card-head"><h3>AI 决策</h3><span class="tag" id="modelSource">待命</span></div>
+        <div class="model-box" id="modelBox">配置 DeepSeek API Key 后，遇到需要判断的题目会由模型选择答案；没有 Key 时使用安全常识启发式规则。</div>
+      </div>
+    </section>
+
+    <section class="tab" id="tab-courses">
+      <div class="card">
+        <div class="course-toolbar">
+          <input id="courseSearch" class="search" placeholder="搜索课程名称 / 分类">
+          <div class="chips" id="courseFilters">
+            <button class="chip active" data-filter="all">全部</button>
+            <button class="chip" data-filter="pending">待完成</button>
+            <button class="chip" data-filter="done">已完成</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="course-table">
+            <thead><tr><th>#</th><th>课程</th><th>分类</th><th>状态</th><th>进度</th></tr></thead>
+            <tbody id="courseBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab" id="tab-settings">
+      <div class="settings-grid">
+        <div class="card">
+          <div class="card-head"><h3>账号与学校</h3></div>
+          <label>学校（可选）<input id="school" placeholder="Your University"></label>
+          <label>课程学习页 URL<input id="studyUrl" placeholder="https://studyvideoh5.zhihuishu.com/stuStudy?recruitAndCourseId=..."></label>
+          <label>账号<input id="account" placeholder="学号"></label>
+          <label>密码<input id="password" type="password" placeholder="留空则保持不变"></label>
+          <p class="hint">密码只保存在本机 config.json，不会上传到任何服务器。</p>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>DeepSeek 模型</h3><span class="tag" id="keyTag">未配置</span></div>
+          <label>API Key<input id="apiKey" type="password" placeholder="sk-...（留空则不修改）"></label>
+          <label>Base URL<input id="baseUrl" placeholder="https://api.deepseek.com"></label>
+          <label>模型<input id="model" placeholder="deepseek-chat"></label>
+          <label>视觉模型（小游戏/截图）<input id="visionModel" placeholder="deepseek-flash"></label>
+          <label>答题策略<select id="quizMode"><option value="model">AI 接管（推荐，需 Key）</option><option value="brute">穷举（不调用模型）</option></select></label>
+          <label class="switch"><input id="modelResident" type="checkbox"><span>常驻监督（卡住/异常时让 AI 决策）</span></label>
+          <div class="row">
+            <button class="ghost" id="testModelBtn">测试连接</button>
+            <span class="muted" id="testModelMsg"></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>浏览器与速度</h3></div>
+          <label>浏览器配置目录<input id="profileDir" placeholder="C:\...\Edge-Profile"></label>
+          <label>翻页间隔（毫秒）<input id="pageDelayMs" type="number" min="200" max="5000" step="50"></label>
+          <label class="switch"><input id="headless" type="checkbox"><span>无头模式（不显示浏览器窗口）</span></label>
+          <p class="hint">默认使用本机 Edge。第一次使用需要登录一次，之后会保留登录状态。</p>
+        </div>
+      </div>
+      <div class="save-bar">
+        <button class="primary" id="saveConfigBtn">保存设置</button>
+        <button class="ghost" id="loginBtn">打开登录页</button>
+      </div>
+    </section>
+
+    <section class="tab" id="tab-help">
+      <div class="card help">
+        <h3>怎么用</h3>
+        <ol>
+          <li><b>启动浏览器</b>：点击控制台的「启动浏览器」，会打开一个独立的 Edge 窗口。</li>
+          <li><b>登录一次</b>：如果未登录，点「登录」，学校/账号/密码会自动填好，你只需要完成图片验证码并点登录。登录状态会保留。</li>
+          <li><b>开始刷课</b>：回到控制台点「开始刷课」。脚本会按课程列表逐门打开、翻页、答题、等待视频、处理验证码。</li>
+          <li><b>验证码</b>：出现图片验证码时，右侧会弹出验证窗口，按提示顺序点击图片即可，脚本会继续。</li>
+          <li><b>AI 答题</b>：在设置里填 DeepSeek API Key。没有 Key 也能跑，简单题使用内置规则；复杂题建议配置模型。</li>
+        </ol>
+        <h3>注意</h3>
+        <ul>
+          <li>脚本只操作你自己的账号，不修改课程内容。</li>
+          <li>浏览器窗口可以最小化，但不要关闭；关闭后需要重新启动。</li>
+          <li>遇到卡住会在日志里标红，并停在当前课程，方便你接手。</li>
+        </ul>
+        <h3>目录</h3>
+        <p class="mono" id="helpDir">—</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="humanModal">
+  <div class="modal-card">
+    <div class="modal-head">
+      <div><h3 id="humanTitle">需要人工处理</h3><p id="humanMsg">请在浏览器里完成验证，然后点“我已处理，继续”。</p></div>
+      <button class="icon-btn" id="humanClose">×</button>
+    </div>
+    <div class="shot" style="margin:0 20px 16px;aspect-ratio:16/10">
+      <img id="humanImg" alt="当前画面">
+    </div>
+    <div class="captcha-foot">
+      <span class="muted">处理完再继续，脚本会接着跑</span>
+      <button class="primary" id="humanAck">我已处理，继续</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="captchaModal">
+  <div class="modal-card captcha-card">
+    <div class="modal-head">
+      <div><h3>需要人工验证</h3><p id="captchaHeader">请按顺序点击图片中的字符</p></div>
+      <button class="icon-btn" id="captchaClose">×</button>
+    </div>
+    <div class="captcha-stage" id="captchaStage">
+      <img id="captchaImg" alt="验证码">
+      <div class="captcha-marks" id="captchaMarks"></div>
+    </div>
+    <div class="captcha-foot">
+      <span class="muted" id="captchaHint">点击顺序：</span>
+      <div class="captcha-actions">
+        <button class="ghost sm" id="captchaReset">重来</button>
+        <button class="primary sm" id="captchaSubmit">提交验证</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
