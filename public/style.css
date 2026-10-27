@@ -1,3 +1,7 @@
+.error-banner{display:none;align-items:center;gap:10px;margin:0 0 14px;padding:10px 14px;border:1px solid rgba(255,107,107,.55);background:rgba(120,20,30,.35);border-radius:12px;color:#ffd7d7;font-size:12px}
+.error-banner.show{display:flex}
+.error-banner b{color:#ff8080;letter-spacing:.08em}
+.error-banner span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 :root{
   --bg:#070d19;
   --bg2:#0b1424;

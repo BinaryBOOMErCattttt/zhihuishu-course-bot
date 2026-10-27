@@ -89,3 +89,11 @@ Do **not** use the public course page. On Zhihuishu, the public course is marked
 ## License
 
 MIT. Not affiliated with Zhihuishu or DeepSeek.
+
+## Autonomous repair
+
+- Every error or idle watchdog event captures one screenshot and 35 surrounding log lines under `data/incidents/`.
+- The incident is pushed to the debug agent with 2 rounds of persistent memory (`data/agent-memory.json`).
+- The agent can inspect the quiz DOM, dismiss blocking prompts, solve quizzes, reopen the course page, write new browser plugins under `data/plugins/`, or patch bot methods through `data/patches.json`.
+- It retries until the normal video loop takes over again; only then falls back to a human modal.
+- Captcha is attempted by the vision model first (drag slider, up to 6 attempts), then falls back to a human modal.

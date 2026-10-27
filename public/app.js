@@ -2,6 +2,8 @@
 
 const $ = (id) => document.getElementById(id);
 let S = null;
+let dismissedErrorAt = '';
+$('errorAck').addEventListener('click', () => { dismissedErrorAt = S?.lastError?.at || ''; $('errorBanner').classList.remove('show'); });
 let currentTab = 'dashboard';
 let courseFilter = 'all';
 let courseSearch = '';
@@ -208,6 +210,13 @@ function drawMarks() {
   box.innerHTML = captchaPoints.map((p, i) => '<div class="mark" style="left:' + (p.x * 100) + '%;top:' + (p.y * 100) + '%">' + (i + 1) + '</div>').join('');
 }
 
+function renderError(s) {
+  const box = $('errorBanner');
+  if (!s.lastError || !s.lastError.at || s.lastError.at === dismissedErrorAt) { box.classList.remove('show'); return; }
+  box.classList.add('show');
+  $('errorText').textContent = s.lastError.event + ' · ' + (s.lastError.message || '') + '（累计 ' + (s.errorCount || 0) + ' 次）';
+}
+
 function render(s) {
   S = s;
   applyStatus(s);
@@ -216,6 +225,7 @@ function render(s) {
   renderCourses(s);
   renderHuman(s);
   renderCaptcha(s);
+  renderError(s);
   const elapsed = s.startedAt && (s.running || s.status === 'running' || s.status === 'paused' || s.status === 'captcha') ? Date.now() - new Date(s.startedAt).getTime() : 0;
   $('elapsed').textContent = fmtDuration(elapsed);
 }
@@ -236,7 +246,7 @@ async function loadConfig() {
     const r = await api('/api/config');
     const c = r.config;
     $('school').value = c.school || '';
-    $('studyUrl').value = c.studyUrl || '';
+    $('speed').value = String(c.speed || 1);
     $('account').value = c.account || '';
     $('baseUrl').value = c.baseUrl || 'https://api.deepseek.com';
     $('model').value = c.model || 'deepseek-chat';
@@ -259,7 +269,7 @@ async function loadConfig() {
 async function saveConfig() {
   const body = {
     school: $('school').value.trim(),
-    studyUrl: $('studyUrl').value.trim(),
+    speed: Number($('speed').value) || 1,
     account: $('account').value.trim(),
     baseUrl: $('baseUrl').value.trim(),
     model: $('model').value.trim(),
@@ -327,6 +337,16 @@ $('aiStepBtn').addEventListener('click', async () => {
   }
 });
 
+$('reloadBtn').addEventListener('click', async () => {
+  try {
+    toast('正在热重载脚本，不关闭浏览器…');
+    const r = await api('/api/reload', { method: 'POST' });
+    toast('热重载完成：' + r.methods + ' 个方法，浏览器保持打开', false);
+    await poll();
+  } catch (e) {
+    toast('热重载失败：' + e.message, true);
+  }
+});
 $('pauseBtn').addEventListener('click', () => action(async () => {
   if (S?.paused) await api('/api/resume', { method: 'POST' });
   else await api('/api/pause', { method: 'POST' });
@@ -349,7 +369,8 @@ async function sendDebug() {
   $('debugSend').disabled = true;
   try {
     const r = await api('/api/debug/chat', { method: 'POST', body: { message: msg } });
-    box.textContent = '你：' + msg + '\n\nAI：' + (r.answer || '(无返回)');
+    const acts = Array.isArray(r.actions) && r.actions.length ? '\n\n执行动作：' + r.actions.map(a => a.tool).join(' → ') : '\n\n（本次没有执行动作）';
+    box.textContent = '你：' + msg + '\n\nAI：' + (r.answer || '(无返回)') + acts;
     input.value = '';
     await poll();
   } catch (e) {

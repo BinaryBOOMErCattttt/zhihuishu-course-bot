@@ -25,14 +25,16 @@ const defaultConfig = {
   account: '',
   password: '',
   profileDir: path.join(ROOT, 'profile'),
-  speed: 1,
+  speed: 1.5,
   headless: false,
   pageDelayMs: 650,
   quizMode: 'model',
   modelResident: true,
   visionModel: 'deepseek-flash',
   studyUrl: '',
-  browserChannel: process.platform === 'win32' ? 'msedge' : ''
+  browserChannel: process.platform === 'win32' ? 'msedge' : '',
+  autoDebug: true,
+  agentMemoryRounds: 2
 };
 
 function loadJson(file, fallback) {
@@ -43,13 +45,12 @@ function saveJson(file, data) {
 }
 
 let config = { ...defaultConfig, ...loadJson(CONFIG_PATH, {}) };
-// 云端部署可用环境变量覆盖，不要提交真实 Key
 if (process.env.DEEPSEEK_API_KEY) config.apiKey = process.env.DEEPSEEK_API_KEY;
 if (process.env.STUDY_URL) config.studyUrl = process.env.STUDY_URL;
 if (process.env.BROWSER_CHANNEL !== undefined) config.browserChannel = process.env.BROWSER_CHANNEL;
 if (process.env.PROFILE_DIR) config.profileDir = process.env.PROFILE_DIR;
 if (process.env.HEADLESS !== undefined) config.headless = String(process.env.HEADLESS).toLowerCase() === 'true';
-if (process.env.SPEED) config.speed = Number(process.env.SPEED) || 1;
+if (process.env.SPEED) config.speed = Number(process.env.SPEED) || 1.5;
 let state = loadJson(STATE_PATH, { completed: [], done: 0, current: null });
 if (!Array.isArray(state.completed)) state.completed = [];
 
@@ -119,7 +120,7 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/config' && req.method === 'POST') {
       const b = await body(req);
       const next = { ...bot.config };
-      for (const key of ['baseUrl', 'model', 'school', 'account', 'password', 'profileDir', 'headless', 'pageDelayMs', 'apiKey', 'quizMode', 'modelResident', 'visionModel', 'speed', 'studyUrl', 'browserChannel']) {
+      for (const key of ['baseUrl', 'model', 'school', 'account', 'password', 'profileDir', 'headless', 'pageDelayMs', 'apiKey', 'quizMode', 'modelResident', 'visionModel', 'speed', 'studyUrl', 'browserChannel', 'autoDebug', 'agentMemoryRounds']) {
         if (Object.prototype.hasOwnProperty.call(b, key)) {
           if (key === 'apiKey' && /^\*+$/.test(String(b[key] || ''))) continue;
           next[key] = b[key];
@@ -164,6 +165,23 @@ const server = http.createServer(async (req, res) => {
         const b = await body(req);
         const r = await bot.debugChat(String(b.message || ''));
         return json(res, 200, { ok: true, ...r });
+      } catch (e) {
+        return json(res, 500, { ok: false, error: e.message });
+      }
+    }
+    if (p === '/api/reload' && req.method === 'POST') {
+      try {
+        for (const key of Object.keys(require.cache)) {
+          if (key.endsWith('lib\\bot.js') || key.endsWith('lib\\deepseek.js')) delete require.cache[key];
+        }
+        const NewBot = require('./lib/bot').Bot;
+        let count = 0;
+        for (const name of Object.getOwnPropertyNames(NewBot.prototype)) {
+          if (name === 'constructor') continue;
+          bot[name] = NewBot.prototype[name];
+          count++;
+        }
+        return json(res, 200, { ok: true, methods: count, browserReady: Boolean(bot.context), url: bot.page?.url?.() });
       } catch (e) {
         return json(res, 500, { ok: false, error: e.message });
       }
@@ -259,7 +277,7 @@ server.listen(PORT, HOST, () => {
   console.log('  GUI: ' + url);
   console.log('  按 Ctrl+C 退出');
   console.log('');
-  if (process.platform === 'win32' && (HOST === '127.0.0.1' || HOST === 'localhost')) {
+  if (process.platform === 'win32') {
     setTimeout(() => exec('start "" "' + url + '"'), 400);
   }
 });
