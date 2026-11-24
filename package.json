@@ -1,20 +1,16 @@
 {
-  "name": "zhihuishu-course-bot",
+  "name": "zhihuishu-bot",
   "version": "1.0.0",
-  "private": false,
-  "description": "A local web GUI bot for watching Zhihuishu shared-course videos and answering quizzes with an LLM.",
+  "private": true,
+  "description": "智慧树自动刷课助手（Playwright + 本地控制台）",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "cli": "node cli.js",
+    "check": "node tools/adapter-check.js adapters/zhihuishu.js",
+    "test": "node tests/engine.test.js && node tests/bank_mapping.test.js && node tests/timer_once.test.js && node tests/autonomy_offline.test.js"
   },
-  "keywords": [
-    "zhihuishu",
-    "playwright",
-    "automation",
-    "deepseek"
-  ],
-  "license": "MIT",
   "dependencies": {
-    "playwright": "^1.64.1"
+    "playwright-core": "^1.64.1"
   }
 }

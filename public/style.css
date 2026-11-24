@@ -230,3 +230,5 @@ label.switch input{width:auto;margin:0}
 .debug-input:focus{border-color:rgba(94,234,212,.4)}
 .debug-answer{display:none;padding:0 14px 12px;color:#a9bfd1;font-size:11.5px;line-height:1.7;white-space:pre-wrap;max-height:180px;overflow:auto}
 .debug-answer.show{display:block}
+
+.timer-line{margin-top:8px;color:#8fa6ba;font-size:11px}.timer-line b{color:#5eead4}

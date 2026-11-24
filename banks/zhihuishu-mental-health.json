@@ -1,0 +1,1724 @@
+{
+  "_meta": {
+    "name": "zhihuishu-mental-health",
+    "site": "zhihuishu",
+    "course": "大学生心理健康教育",
+    "count": {
+      "chapter": 74,
+      "popup": 3
+    }
+  },
+  "chapter": {
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#0": {
+      "question": "在社会活动中，人们运用（ ）相互之间交流信息、沟通情感的过程就是人际交往。",
+      "options": [
+        "非语言符号系统",
+        "语言符号系统或非语言符号系统",
+        "符号系统",
+        "语言符号系统"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "语言符号系统或非语言符号系统"
+      ],
+      "updatedAt": "2026-11-24T06:32:24.316Z",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 0,
+      "source": "textbook-review",
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#1": {
+      "question": ".感觉剥夺实验说明了人际交往具有什么功能（ ）。",
+      "options": [
+        "促进自我认识",
+        "心理保健",
+        "人际协调",
+        "促进社会化"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "心理保健"
+      ],
+      "updatedAt": "2026-11-24T06:32:36.557Z",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 1,
+      "source": "textbook-review",
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#2": {
+      "question": "下列哪一项不属于人际交往理论（ ）",
+      "options": [
+        "社会存在理论",
+        "人际关系的三维理论",
+        "社会交换理论",
+        "社会需要理论"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "社会存在理论"
+      ],
+      "updatedAt": "2026-11-24T06:20:26.291Z",
+      "source": "textbook-review",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 2,
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#3": {
+      "question": "失恋者可能出现的心理（ ）",
+      "options": [
+        "嫉妒心理",
+        "失落心理",
+        "悲伤心理",
+        "报复心理",
+        "自卑心理"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "answers": [
+        "失落心理",
+        "悲伤心理",
+        "报复心理",
+        "自卑心理"
+      ],
+      "updatedAt": "2026-11-24T06:20:26.292Z",
+      "source": "textbook-review",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 3,
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#4": {
+      "question": "失恋了可以如何调适？（ ）",
+      "options": [
+        "活动转移",
+        "价值升华",
+        "情绪宣泄",
+        "积极归因"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "answers": [
+        "活动转移",
+        "价值升华",
+        "情绪宣泄",
+        "积极归因"
+      ],
+      "updatedAt": "2026-11-24T06:20:26.292Z",
+      "source": "textbook-review",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 4,
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#5": {
+      "question": "恋爱的过程是培养爱的能力的过程。爱的能力包括（ ）。",
+      "options": [
+        "表达爱",
+        "给予爱",
+        "呵护爱",
+        "拒绝爱",
+        "解决爱的冲突"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "answers": [
+        "给予爱",
+        "表达爱",
+        "拒绝爱",
+        "解决爱的冲突"
+      ],
+      "updatedAt": "2026-11-24T06:20:26.292Z",
+      "source": "textbook-review",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 5,
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#6": {
+      "question": "根据霍曼斯（G.C.Homans）等人提出的社会交换理论，人与人之间的交往，本质上是一个社会交换过程。（ ）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "对"
+      ],
+      "updatedAt": "2026-11-24T06:20:26.292Z",
+      "source": "textbook-review",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 6,
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#7": {
+      "question": "时空接近性是密切人际关系的重要条件，但不是绝对的，有的时候，时空过于接近，交往过于频繁，反而容易造成摩擦和冲突，影响人际关系的巩固和发展。（ ）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "对"
+      ],
+      "updatedAt": "2026-11-24T06:20:26.292Z",
+      "source": "textbook-review",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 7,
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#8": {
+      "question": "大学生人际交往的特点包括交往对象的开放性，渴求友谊，交往的民主平等观念强烈，交往目的无价值意识。（ ）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "对"
+      ],
+      "updatedAt": "2026-11-24T06:20:26.292Z",
+      "source": "textbook-review",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 8,
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yYrvKJaA/wKEWLqz5/1000010502/1164#9": {
+      "question": "社交恐惧的人常表现为对人际交往敏感、害怕因交往而使自己受伤害。（ ）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "对"
+      ],
+      "updatedAt": "2026-11-24T06:20:26.292Z",
+      "source": "textbook-review",
+      "examId": "465047/yYrvKJaA/wKEWLqz5/1000010502/1164",
+      "examIndex": 9,
+      "examTitle": "第六章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#0": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "灵性疗愈观",
+        "身心一体健康观",
+        "心理因素决定观",
+        "自认科学疾病观"
+      ],
+      "type": "radio",
+      "indexes": [
+        3
+      ],
+      "answers": [
+        "自认科学疾病观"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 0,
+      "updatedAt": "2026-11-24T07:12:35.678Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#1": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "情绪",
+        "疼痛",
+        "生理症状",
+        "心理疾病"
+      ],
+      "type": "radio",
+      "indexes": [
+        3
+      ],
+      "answers": [
+        "心理疾病"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 1,
+      "updatedAt": "2026-11-24T07:12:38.049Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#2": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "学习负担",
+        "身体问题",
+        "心理问题",
+        "生活适应"
+      ],
+      "type": "radio",
+      "indexes": [
+        2
+      ],
+      "answers": [
+        "心理问题"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 2,
+      "updatedAt": "2026-11-24T07:12:40.201Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#3": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "适应问题",
+        "情感问题",
+        "学业问题",
+        "人际问题"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "适应问题"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 3,
+      "updatedAt": "2026-11-24T07:12:42.680Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#4": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "良好的社会适应",
+        "与人和谐相处",
+        "情绪稳定",
+        "能够自我认识和自我接纳"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "answers": [
+        "良好的社会适应",
+        "能够自我认识和自我接纳",
+        "与人和谐相处",
+        "情绪稳定"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 4,
+      "updatedAt": "2026-11-24T07:12:45.034Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#5": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "经验标准",
+        "统计学标准",
+        "临床诊断标准",
+        "社会规范标准"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "answers": [
+        "临床诊断标准",
+        "统计学标准",
+        "社会规范标准",
+        "经验标准"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 5,
+      "updatedAt": "2026-11-24T07:12:47.074Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#6": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "促进大学生人格的健全发展",
+        "维护大学生的心理健康",
+        "开发大学生的心理潜能",
+        "促进大学生的学习效能"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        2,
+        1,
+        0
+      ],
+      "answers": [
+        "开发大学生的心理潜能",
+        "维护大学生的心理健康",
+        "促进大学生人格的健全发展"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 6,
+      "updatedAt": "2026-11-24T07:12:50.733Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#7": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "积极参加班级管理和班级活动",
+        "寻求心理咨询帮助",
+        "参加各项心理活动",
+        "积极参与学校各种活动"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "answers": [
+        "积极参与学校各种活动",
+        "寻求心理咨询帮助",
+        "积极参加班级管理和班级活动",
+        "参加各项心理活动"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 7,
+      "updatedAt": "2026-11-24T07:12:53.016Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#9": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 9,
+      "updatedAt": "2026-11-24T07:13:01.386Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164#8": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/yRL1XPpN/5j9Pj3Ve/1000010502/1164",
+      "examIndex": 8,
+      "updatedAt": "2026-11-24T07:12:57.725Z",
+      "source": "bank",
+      "examTitle": "第一章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#0": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 0,
+      "updatedAt": "2026-11-24T11:13:21.199Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.647Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#1": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "适应的能力与年龄相关，年龄越大，适应能力越强。",
+        "大学适应需求不只表现在初期。",
+        "适应是一个过程，在与环境的互动中逐步产生的。",
+        "适应的需求随时存在。"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "适应的能力与年龄相关，年龄越大，适应能力越强。"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 1,
+      "updatedAt": "2026-11-24T11:13:22.065Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.648Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#2": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 2,
+      "updatedAt": "2026-11-24T11:13:22.936Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.648Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#3": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "分离",
+        "整合",
+        "边缘化",
+        "同化"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "分离"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 3,
+      "updatedAt": "2026-11-24T11:13:23.796Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.648Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#4": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 4,
+      "updatedAt": "2026-11-24T11:13:29.415Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.648Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#5": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 5,
+      "updatedAt": "2026-11-24T11:13:35.082Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.648Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#6": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 6,
+      "updatedAt": "2026-11-24T11:13:35.955Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.648Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#7": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "持续使用题海战术",
+        "多与学长老师进行沟通",
+        "制定不同期限的目标",
+        "学会时间管理"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        1,
+        3,
+        2
+      ],
+      "answers": [
+        "多与学长老师进行沟通",
+        "学会时间管理",
+        "制定不同期限的目标"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 7,
+      "updatedAt": "2026-11-24T11:13:36.830Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.648Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#8": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 8,
+      "updatedAt": "2026-11-24T11:13:37.689Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.648Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164#9": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/yZ9vq8dY/w3Z8mYny/1000010502/1164",
+      "examIndex": 9,
+      "updatedAt": "2026-11-24T11:13:38.564Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "verifiedTotal": 20,
+      "verifiedAt": "2026-11-24T11:15:38.648Z",
+      "examTitle": "第二章单元测试"
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#0": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 0,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "从结构形式上看，自我意识可以分为自我认识、自我体验和（ ）。",
+      "options": [
+        "社会自我",
+        "自我调控",
+        "生理自我",
+        "心理自我"
+      ],
+      "answers": [
+        "自我调控"
+      ],
+      "indexes": [
+        1
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#1": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 1,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "大学生自我意识常见偏差中，具有自我中心、狂妄自大、自我膨胀、孤芳自赏特征的人是（ ）。",
+      "options": [
+        "虚荣",
+        "自卑",
+        "自负",
+        "从众"
+      ],
+      "answers": [
+        "自负"
+      ],
+      "indexes": [
+        2
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#2": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 2,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "正确认识自我的比较法中不包含哪一种（ ）。",
+      "options": [
+        "向外比较",
+        "向上比较",
+        "向下比较",
+        "相似比较"
+      ],
+      "answers": [
+        "向外比较"
+      ],
+      "indexes": [
+        0
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#3": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 3,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "在乔韩窗口理论中，自己不知道、别人知道的部分叫做（ ）。",
+      "options": [
+        "公开的我",
+        "秘密的我",
+        "盲目的我",
+        "未知的我"
+      ],
+      "answers": [
+        "盲目的我"
+      ],
+      "indexes": [
+        2
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#4": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 4,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "他人是一面镜子，可以通过与他人的比较来认识自己。在与他人进行比较的过程中应该注意（ ）。",
+      "options": [
+        "选取比自己差的比较对象",
+        "选一个出类拔萃的比较对象",
+        "不能用他人的优点和自己的缺点进行比较",
+        "只要学业成绩优异就可以作为比较对象"
+      ],
+      "answers": [
+        "不能用他人的优点和自己的缺点进行比较"
+      ],
+      "indexes": [
+        2
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#5": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 5,
+      "type": "checkbox",
+      "examTitle": "第三章单元测试",
+      "question": "大学生自我意识的提升方法有（ ）。",
+      "options": [
+        "合理调控自我",
+        "不断超越自我",
+        "正确认识自我",
+        "积极悦纳自我"
+      ],
+      "answers": [
+        "合理调控自我",
+        "不断超越自我",
+        "正确认识自我",
+        "积极悦纳自我"
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#6": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 6,
+      "type": "checkbox",
+      "examTitle": "第三章单元测试",
+      "question": "如何克服青春期个体的自我中心倾向？（ ）",
+      "options": [
+        "多情绪性推理",
+        "多实践实践活动",
+        "客观评价自己",
+        "学会换位思考"
+      ],
+      "answers": [
+        "多实践实践活动",
+        "客观评价自己",
+        "学会换位思考"
+      ],
+      "indexes": [
+        1,
+        2,
+        3
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#7": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 7,
+      "type": "checkbox",
+      "examTitle": "第三章单元测试",
+      "question": "以下属于“过度自我认同”者表现的是（ ）。",
+      "options": [
+        "容易对自己提出不切合实际的要求。",
+        "在人际交往中属于“我好，你不好”、“我行，你不行”之人。",
+        "放大自己的优点，甚至把缺点也视为优点。",
+        "不容易看到别人优点，放大别人的缺点。"
+      ],
+      "answers": [
+        "容易对自己提出不切合实际的要求。",
+        "在人际交往中属于“我好，你不好”、“我行，你不行”之人。",
+        "放大自己的优点，甚至把缺点也视为优点。",
+        "不容易看到别人优点，放大别人的缺点。"
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#8": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 8,
+      "type": "checkbox",
+      "examTitle": "第三章单元测试",
+      "question": "“悦纳自己”的人能够做到（ ）",
+      "options": [
+        "敢于承认自己的缺点，相信自己，更好的发展自己。",
+        "自己开心就好，管他人怎么想。",
+        "理性认识自己的优点与不足.",
+        "夸大自己的优点，忽略自己的缺点。"
+      ],
+      "answers": [
+        "敢于承认自己的缺点，相信自己，更好的发展自己。",
+        "理性认识自己的优点与不足."
+      ],
+      "indexes": [
+        0,
+        2
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#9": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 9,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "“人贵在有自知之明”说明对自己正确的认识很重要。（ ）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answers": [
+        "对"
+      ],
+      "indexes": [
+        0
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#10": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 10,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "自我探索是持续终身的过程。（ ）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answers": [
+        "对"
+      ],
+      "indexes": [
+        0
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#11": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 11,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "自我是一个单一维度的心理结构 。（ ）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "answers": [
+        "错"
+      ],
+      "indexes": [
+        0
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#12": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 12,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "人的生命是肉体生命、精神生命和社会生命的统一体，这是人与动物生命的根本区别。（ ）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "answers": [
+        "对"
+      ],
+      "indexes": [
+        1
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#13": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 13,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "完善自我是为了寻求完美无瑕的我。（ ）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answers": [
+        "错"
+      ],
+      "indexes": [
+        1
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#14": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 14,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "人会根据一定的标准对自己表现出的行为和拥有的特征进行价值判断，就是自我评价。",
+      "options": [
+        "错",
+        "对"
+      ],
+      "answers": [
+        "对"
+      ],
+      "indexes": [
+        1
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/y0MRqgQa/wVnNZKLw/1000010502/1164#15": {
+      "examId": "465047/y0MRqgQa/wVnNZKLw/1000010502/1164",
+      "examIndex": 15,
+      "type": "radio",
+      "examTitle": "第三章单元测试",
+      "question": "自卑的人肯放低自己，为人低调谦逊，因此人际关系都很好。（ ）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "answers": [
+        "错"
+      ],
+      "indexes": [
+        0
+      ],
+      "updatedAt": "2026-11-24T08:33:13.854Z",
+      "source": "review-ch3",
+      "prevAnswers": null
+    },
+    "465047/e93R1axX/5kNg30Oe/1000010502/1164#0": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "冲动性和爆发性",
+        "丰富性和狭隘性",
+        "阶段性和层次性",
+        "成熟性和幼稚性"
+      ],
+      "type": "radio",
+      "indexes": [
+        3
+      ],
+      "answers": [
+        "成熟性和幼稚性"
+      ],
+      "examId": "465047/e93R1axX/5kNg30Oe/1000010502/1164",
+      "examIndex": 0,
+      "updatedAt": "2026-11-24T11:40:35.811Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 16,
+      "examTitle": "第四章单元测试"
+    },
+    "465047/e93R1axX/5kNg30Oe/1000010502/1164#1": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "情绪升华法",
+        "注意力转移法",
+        "自我安慰法",
+        "心理暗示法"
+      ],
+      "type": "radio",
+      "indexes": [
+        2
+      ],
+      "answers": [
+        "自我安慰法"
+      ],
+      "examId": "465047/e93R1axX/5kNg30Oe/1000010502/1164",
+      "examIndex": 1,
+      "updatedAt": "2026-11-24T11:40:38.546Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 16,
+      "examTitle": "第四章单元测试"
+    },
+    "465047/e93R1axX/5kNg30Oe/1000010502/1164#2": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "外部事件",
+        "生理唤醒",
+        "外部表现",
+        "主观体验"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        3,
+        1,
+        2
+      ],
+      "answers": [
+        "主观体验",
+        "生理唤醒",
+        "外部表现"
+      ],
+      "examId": "465047/e93R1axX/5kNg30Oe/1000010502/1164",
+      "examIndex": 2,
+      "updatedAt": "2026-11-24T11:40:40.569Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 16,
+      "examTitle": "第四章单元测试"
+    },
+    "465047/e93R1axX/5kNg30Oe/1000010502/1164#3": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "焦虑",
+        "抑郁与冷漠",
+        "愤怒",
+        "嫉妒"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "answers": [
+        "焦虑",
+        "愤怒",
+        "抑郁与冷漠",
+        "嫉妒"
+      ],
+      "examId": "465047/e93R1axX/5kNg30Oe/1000010502/1164",
+      "examIndex": 3,
+      "updatedAt": "2026-11-24T11:40:42.585Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 16,
+      "examTitle": "第四章单元测试"
+    },
+    "465047/e93R1axX/5kNg30Oe/1000010502/1164#4": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/e93R1axX/5kNg30Oe/1000010502/1164",
+      "examIndex": 4,
+      "updatedAt": "2026-11-24T11:40:45.622Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 16,
+      "examTitle": "第四章单元测试"
+    },
+    "465047/e93R1axX/5kNg30Oe/1000010502/1164#5": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/e93R1axX/5kNg30Oe/1000010502/1164",
+      "examIndex": 5,
+      "updatedAt": "2026-11-24T11:40:46.468Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 16,
+      "examTitle": "第四章单元测试"
+    },
+    "465047/e93R1axX/5kNg30Oe/1000010502/1164#6": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/e93R1axX/5kNg30Oe/1000010502/1164",
+      "examIndex": 6,
+      "updatedAt": "2026-11-24T11:40:47.315Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 16,
+      "examTitle": "第四章单元测试"
+    },
+    "465047/e93R1axX/5kNg30Oe/1000010502/1164#7": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/e93R1axX/5kNg30Oe/1000010502/1164",
+      "examIndex": 7,
+      "updatedAt": "2026-11-24T11:40:48.171Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 16,
+      "examTitle": "第四章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#0": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "学习范围的广泛性",
+        "学习态度的主动性",
+        "学习对象的多样性",
+        "学习过程的阶段性"
+      ],
+      "type": "radio",
+      "indexes": [
+        2
+      ],
+      "answers": [
+        "学习对象的多样性"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 0,
+      "updatedAt": "2026-11-24T11:59:19.206Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#1": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "复述",
+        "做笔记",
+        "记忆术",
+        "生成性学习"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "复述"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 1,
+      "updatedAt": "2026-11-24T11:59:21.704Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#2": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "表格",
+        "记笔记",
+        "图形",
+        "列提纲"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "记笔记"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 2,
+      "updatedAt": "2026-11-24T11:59:24.038Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#3": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "形式训练说",
+        "概括化理论",
+        "共同要素说",
+        "关系类比说"
+      ],
+      "type": "radio",
+      "indexes": [
+        3
+      ],
+      "answers": [
+        "关系类比说"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 3,
+      "updatedAt": "2026-11-24T11:59:26.496Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#4": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "矛盾斗争性",
+        "复杂多元性",
+        "动态变化性",
+        "稳定不变性"
+      ],
+      "type": "radio",
+      "indexes": [
+        3
+      ],
+      "answers": [
+        "稳定不变性"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 4,
+      "updatedAt": "2026-11-24T11:59:28.702Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#5": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "倒“U”曲线",
+        "“U”曲线",
+        "学习动机越强，学习效率越低",
+        "学习动机越强，学习效率越高"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "倒“U”曲线"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 5,
+      "updatedAt": "2026-11-24T11:59:31.085Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#6": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "学习引起的变化是持久的",
+        "学习是行为或行为潜能的变化",
+        "学习是由反复经验引起的",
+        "学习引起的变化是短暂的"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        0,
+        1,
+        2
+      ],
+      "answers": [
+        "学习引起的变化是持久的",
+        "学习是行为或行为潜能的变化",
+        "学习是由反复经验引起的"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 6,
+      "updatedAt": "2026-11-24T11:59:36.277Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#7": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "概念学习",
+        "刺激－反应学习",
+        "言语联想学习",
+        "规则的学习"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "answers": [
+        "概念学习",
+        "刺激－反应学习",
+        "言语联想学习",
+        "规则的学习"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 7,
+      "updatedAt": "2026-11-24T11:59:43.024Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#8": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 8,
+      "updatedAt": "2026-11-24T11:59:45.440Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/yNkMDx2L/w4B8O065/1000010502/1164#9": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/yNkMDx2L/w4B8O065/1000010502/1164",
+      "examIndex": 9,
+      "updatedAt": "2026-11-24T11:59:47.996Z",
+      "source": "bank",
+      "examTitle": "第五章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#0": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 0,
+      "updatedAt": "2026-11-24T12:12:10.689Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#1": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 1,
+      "updatedAt": "2026-11-24T12:12:11.514Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#2": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 2,
+      "updatedAt": "2026-11-24T12:12:12.338Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#3": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "自省法",
+        "职业测评法",
+        "360º评估法",
+        "他人比较法"
+      ],
+      "type": "radio",
+      "indexes": [
+        2
+      ],
+      "answers": [
+        "360º评估法"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 3,
+      "updatedAt": "2026-11-24T12:12:13.163Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#4": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 4,
+      "updatedAt": "2026-11-24T12:12:13.986Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#5": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "错",
+        "对"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 5,
+      "updatedAt": "2026-11-24T12:12:14.822Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#6": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 6,
+      "updatedAt": "2026-11-24T12:12:15.646Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#7": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 7,
+      "updatedAt": "2026-11-24T12:12:16.468Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#8": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "成本低",
+        "方便快捷",
+        "全面",
+        "准确"
+      ],
+      "type": "checkbox",
+      "indexes": [
+        0,
+        1
+      ],
+      "answers": [
+        "成本低",
+        "方便快捷"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 8,
+      "updatedAt": "2026-11-24T12:12:17.293Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    },
+    "465047/erQWb2rV/yqkr0Mge/1000010502/1164#9": {
+      "question": "（题干为图片/动态文本，请根据截图和选项作答）",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "对"
+      ],
+      "examId": "465047/erQWb2rV/yqkr0Mge/1000010502/1164",
+      "examIndex": 9,
+      "updatedAt": "2026-11-24T12:12:18.116Z",
+      "source": "bank",
+      "verified": true,
+      "verifiedScore": 20,
+      "examTitle": "第七章单元测试"
+    }
+  },
+  "popup": {
+    "395e1a88231485192202a99de43e201fcf208162": {
+      "question": "AI助教小智给你出题啦！学习过程中有问题，随时点我 弹题是为了帮助同学们巩固知识点，不会影响到大家作业和考试的成绩。 1 正确 【判断题】大学生职业生涯规划的目的是帮助大学生按照自己的资历条件找到一份工作。 对 错 正确答案：B",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "updatedAt": "2026-11-24T06:05:56.685Z"
+    },
+    "556eb5222f0f7c80b1c34872cce51f6056a4e4d1": {
+      "question": "AI助教小智给你出题啦！学习过程中有问题，随时点我 弹题是为了帮助同学们巩固知识点，不会影响到大家作业和考试的成绩。 1 【判断题】一个人可以通过与他人比较来增强对自己的认识。 对 错",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        0
+      ],
+      "answers": [
+        "对"
+      ],
+      "updatedAt": "2026-11-24T06:20:43.912Z"
+    },
+    "9c4843abefe799358ecf90b004a33a9e06aca2ab": {
+      "question": "AI助教小智给你出题啦！学习过程中有问题，随时点我 弹题是为了帮助同学们巩固知识点，不会影响到大家作业和考试的成绩。 1 【判断题】心理健康有客观的标准。 对 错",
+      "options": [
+        "对",
+        "错"
+      ],
+      "type": "radio",
+      "indexes": [
+        1
+      ],
+      "answers": [
+        "错"
+      ],
+      "updatedAt": "2026-11-24T06:25:38.102Z"
+    }
+  }
+}

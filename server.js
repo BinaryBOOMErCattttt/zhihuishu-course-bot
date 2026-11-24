@@ -8,7 +8,6 @@ const { Bot } = require('./lib/bot');
 
 const ROOT = __dirname;
 const PORT = Number(process.env.PORT || 4319);
-const HOST = process.env.HOST || '127.0.0.1';
 const CONFIG_PATH = path.join(ROOT, 'config.json');
 const STATE_PATH = path.join(ROOT, 'data', 'state.json');
 const PUBLIC = path.join(ROOT, 'public');
@@ -24,17 +23,17 @@ const defaultConfig = {
   school: '',
   account: '',
   password: '',
-  profileDir: path.join(ROOT, 'profile'),
+  profileDir: path.join(process.env.USERPROFILE || require('os').homedir(), '.zhihuishu-bot', 'profile'),
+  adapter: 'zhihuishu',
+  studyUrl: '',
+  bankPath: '',      // 留空则用 data/quiz-bank.json
   speed: 1.5,
+  dailyLimitSeconds: 1500,
   headless: false,
   pageDelayMs: 650,
   quizMode: 'model',
   modelResident: true,
-  visionModel: 'deepseek-flash',
-  studyUrl: '',
-  browserChannel: process.platform === 'win32' ? 'msedge' : '',
-  autoDebug: true,
-  agentMemoryRounds: 2
+  visionModel: 'deepseek-flash'
 };
 
 function loadJson(file, fallback) {
@@ -45,12 +44,6 @@ function saveJson(file, data) {
 }
 
 let config = { ...defaultConfig, ...loadJson(CONFIG_PATH, {}) };
-if (process.env.DEEPSEEK_API_KEY) config.apiKey = process.env.DEEPSEEK_API_KEY;
-if (process.env.STUDY_URL) config.studyUrl = process.env.STUDY_URL;
-if (process.env.BROWSER_CHANNEL !== undefined) config.browserChannel = process.env.BROWSER_CHANNEL;
-if (process.env.PROFILE_DIR) config.profileDir = process.env.PROFILE_DIR;
-if (process.env.HEADLESS !== undefined) config.headless = String(process.env.HEADLESS).toLowerCase() === 'true';
-if (process.env.SPEED) config.speed = Number(process.env.SPEED) || 1.5;
 let state = loadJson(STATE_PATH, { completed: [], done: 0, current: null });
 if (!Array.isArray(state.completed)) state.completed = [];
 
@@ -120,7 +113,7 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/config' && req.method === 'POST') {
       const b = await body(req);
       const next = { ...bot.config };
-      for (const key of ['baseUrl', 'model', 'school', 'account', 'password', 'profileDir', 'headless', 'pageDelayMs', 'apiKey', 'quizMode', 'modelResident', 'visionModel', 'speed', 'studyUrl', 'browserChannel', 'autoDebug', 'agentMemoryRounds']) {
+      for (const key of ['baseUrl', 'model', 'school', 'account', 'password', 'profileDir', 'headless', 'pageDelayMs', 'apiKey', 'quizMode', 'modelResident', 'visionModel', 'speed', 'dailyLimitSeconds', 'adapter', 'studyUrl', 'bankPath']) {
         if (Object.prototype.hasOwnProperty.call(b, key)) {
           if (key === 'apiKey' && /^\*+$/.test(String(b[key] || ''))) continue;
           next[key] = b[key];
@@ -150,8 +143,27 @@ const server = http.createServer(async (req, res) => {
       catch (e) { return json(res, 500, { ok: false, error: e.message }); }
     }
     if (p === '/api/start' && req.method === 'POST') {
-      try { const s = await bot.start(); return json(res, 200, { ok: true, state: s }); }
+      try {
+        const b = await body(req).catch(() => ({}));
+        const s = Number.isInteger(b.index) ? await bot.startAt(b.index) : await bot.start();
+        return json(res, 200, { ok: true, state: s });
+      }
       catch (e) { return json(res, 500, { ok: false, error: e.message }); }
+    }
+    if (p === '/api/exam/run' && req.method === 'POST') {
+      try {
+        const b = await body(req).catch(() => ({}));
+        if (Number.isInteger(b.index)) await bot.openTest(b.index);
+        const r = await bot.solveExam();
+        return json(res, 200, { ok: true, ...r });
+      } catch (e) { return json(res, 500, { ok: false, error: e.message }); }
+    }
+    if (p === '/api/progress/clear' && req.method === 'POST') {
+      try {
+        const b = await body(req);
+        const r = await bot.clearProgress(Number(b.index));
+        return json(res, 200, { ok: true, ...r });
+      } catch (e) { return json(res, 500, { ok: false, error: e.message }); }
     }
     if (p === '/api/pause' && req.method === 'POST') { await bot.pause(); return json(res, 200, { ok: true }); }
     if (p === '/api/resume' && req.method === 'POST') { await bot.resume(); return json(res, 200, { ok: true }); }
@@ -270,8 +282,8 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, HOST, () => {
-  const url = 'http://' + (HOST === '0.0.0.0' ? '127.0.0.1' : HOST) + ':' + PORT;
+server.listen(PORT, '127.0.0.1', () => {
+  const url = 'http://127.0.0.1:' + PORT;
   console.log('');
   console.log('  智慧树刷课助手');
   console.log('  GUI: ' + url);
@@ -280,6 +292,42 @@ server.listen(PORT, HOST, () => {
   if (process.platform === 'win32') {
     setTimeout(() => exec('start "" "' + url + '"'), 400);
   }
+});
+
+// ---- 崩溃可诊断：写盘 + 不静默退出 ----
+const CRASH_LOG = path.join(__dirname, 'data', 'crash.log');
+function recordCrash(kind, err) {
+  const line = JSON.stringify({
+    t: new Date().toISOString(),
+    kind,
+    msg: err && err.message ? err.message : String(err),
+    stack: err && err.stack ? String(err.stack).slice(0, 4000) : '',
+    url: (() => { try { return bot?.page?.url?.() || ''; } catch { return ''; } })(),
+    status: bot?.status || ''
+  }) + '\n';
+  try { fs.mkdirSync(path.dirname(CRASH_LOG), { recursive: true }); fs.appendFileSync(CRASH_LOG, line); } catch {}
+  try { console.error('[crash]', kind, err && err.message); } catch {}
+  try { bot?.log?.('process_crash', { kind, msg: err && err.message ? err.message : String(err) }); } catch {}
+}
+process.on('uncaughtException', (err) => {
+  recordCrash('uncaughtException', err);
+  // Playwright 在浏览器被关闭后会抛这类错误，标记状态并放行，不让进程死掉
+  try {
+    if (/has been closed|Target closed|browser has disconnected/i.test(String(err && err.message || ''))) {
+      if (bot) { bot.context = null; bot.page = null; bot.status = 'idle'; bot.browserReady = false; }
+    }
+  } catch {}
+});
+process.on('unhandledRejection', (reason) => {
+  recordCrash('unhandledRejection', reason);
+  try {
+    if (/has been closed|Target closed|browser has disconnected/i.test(String(reason && reason.message || reason || ''))) {
+      if (bot) { bot.context = null; bot.page = null; bot.status = 'idle'; bot.browserReady = false; }
+    }
+  } catch {}
+});
+process.on('exit', (code) => {
+  if (code !== 0) recordCrash('exit', new Error('process exit code ' + code));
 });
 
 process.on('SIGINT', async () => {

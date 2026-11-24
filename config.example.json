@@ -6,14 +6,14 @@
   "school": "",
   "account": "",
   "password": "",
+  "adapter": "zhihuishu",
   "studyUrl": "",
   "profileDir": "./profile",
-  "browserChannel": "",
-  "headless": false,
+  "bankPath": "",
   "speed": 1.5,
+  "dailyLimitSeconds": 1500,
+  "headless": false,
   "pageDelayMs": 650,
   "quizMode": "model",
-  "modelResident": true,
-  "autoDebug": true,
-  "agentMemoryRounds": 2
+  "modelResident": true
 }

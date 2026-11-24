@@ -24,6 +24,7 @@ const STATUS = {
   error: ['出错', '已停止在当前课程', '出错了', '查看日志中的红色记录，修复后重新开始。', 'bad'],
   done: ['全部完成', '85 门课程已刷完', '全部完成', '可以关闭浏览器，或到学习足迹确认成绩。', 'ok'],
   stopped: ['已停止', '手动停止', '已停止', '点「开始刷课」可以继续未完成课程。', ''],
+  daily_limit: ['今日已完成', '25 分钟学习时长已满', '可继续观看', '今天达到 25 分钟上限，脚本已停止；你可以再次点开始继续。', 'warn'],
   browser_ready: ['浏览器已连接', '可以开始', '准备就绪', '点「开始刷课」运行。', 'ok']
 };
 
@@ -176,8 +177,8 @@ function renderCourses(s) {
     const now = s.currentCourse?.userCourseId === c.userCourseId;
     const st = c.status === 'done' ? '<span class="badge done">已完成</span>' : now ? '<span class="badge now">进行中</span>' : '<span class="badge pending">待完成</span>';
     const pct = c.status === 'done' ? 100 : now ? 45 : 0;
-    return '<tr><td class="idx">' + (i + 1) + '</td><td class="name">' + esc(c.resourceName) + '</td><td class="cat">' + esc(c.categoryName) + '</td><td>' + st + '</td><td><div class="progress-mini"><i style="width:' + pct + '%"></i></div></td></tr>';
-  }).join('') || '<tr><td colspan="5" style="color:#5f7488;padding:24px">没有匹配的课程</td></tr>';
+    return '<tr><td class="idx">' + ((c.index ?? i) + 1) + '</td><td class="name">' + esc(c.resourceName) + '</td><td class="cat">' + esc(c.categoryName) + '</td><td>' + st + '</td><td><div class="progress-mini"><i style="width:' + pct + '%"></i></div></td><td><button class="ghost sm" data-start="' + (c.index ?? i) + '">从这里开始</button> <button class="ghost sm" data-clear="' + (c.index ?? i) + '">清除完成</button></td></tr>';
+  }).join('') || '<tr><td colspan="6" style="color:#5f7488;padding:24px">没有匹配的课程</td></tr>';
 }
 
 function renderHuman(s) {
@@ -228,6 +229,7 @@ function render(s) {
   renderError(s);
   const elapsed = s.startedAt && (s.running || s.status === 'running' || s.status === 'paused' || s.status === 'captcha') ? Date.now() - new Date(s.startedAt).getTime() : 0;
   $('elapsed').textContent = fmtDuration(elapsed);
+  if ($('timerText') && s.timer) $('timerText').textContent = Math.floor(s.timer.seconds / 60) + ' / ' + Math.floor(s.timer.limit / 60) + ' 分钟';
 }
 
 async function poll() {
@@ -382,6 +384,18 @@ async function sendDebug() {
 }
 $('debugSend').addEventListener('click', sendDebug);
 $('debugInput').addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendDebug(); } });
+$('courseBody').addEventListener('click', async (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  if (b.dataset.start !== undefined) {
+    try { await api('/api/start', { method: 'POST', body: { index: Number(b.dataset.start) } }); toast('已从第 ' + (Number(b.dataset.start) + 1) + ' 节开始', false); await poll(); }
+    catch (err) { toast('启动失败：' + err.message, true); }
+  }
+  if (b.dataset.clear !== undefined) {
+    try { await api('/api/progress/clear', { method: 'POST', body: { index: Number(b.dataset.clear) } }); toast('已清除完成标记，下次不会跳过', false); await poll(); }
+    catch (err) { toast('清除失败：' + err.message, true); }
+  }
+});
 $('courseSearch').addEventListener('input', (e) => { courseSearch = e.target.value; if (S) renderCourses(S); });
 $('courseFilters').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b) return;

@@ -1,9 +1,13 @@
 node_modules/
-config.json
-.env
 profile/
 data/
 shots/
+config.json
+app.log
 *.log
 .DS_Store
-Thumbs.db
+
+# 运行时敏感产物
+*.bak-*
+data/plugins/
+data/incidents/
