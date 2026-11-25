@@ -284,9 +284,16 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, '127.0.0.1', () => {
   const url = 'http://127.0.0.1:' + PORT;
+  const cfg = loadJson(CONFIG_PATH, defaultConfig);
   console.log('');
-  console.log('  智慧树刷课助手');
+  console.log('  刷题 / 刷课 自动化框架');
   console.log('  GUI: ' + url);
+  if (!cfg.studyUrl) {
+    console.log('');
+    console.log('  [!] 未配置 studyUrl');
+    console.log('      打开 GUI → 设置 → 课程站点，填入课程学习页完整 URL');
+    console.log('      否则只能打开站点首页，扫不到任何视频');
+  }
   console.log('  按 Ctrl+C 退出');
   console.log('');
   if (process.platform === 'win32') {

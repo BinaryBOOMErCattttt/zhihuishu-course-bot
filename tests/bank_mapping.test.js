@@ -1,10 +1,10 @@
 const path=require('path');
 const root=path.resolve(__dirname,'..');
-const config=require(root+'/config.json');
+let config={};try{config=JSON.parse(require('fs').readFileSync(root+'/config.json','utf8'));}catch{}
 const {Bot}=require(root+'/lib/bot.js');
-const state=require(root+'/data/state.json');
+let state={completed:[],forcePending:[]};try{state=JSON.parse(require('fs').readFileSync(root+'/data/state.json','utf8'));}catch{}
 const bot=new Bot({rootDir:root,config,state,onEvent:()=>{}});
-const bank=require(root+'/data/quiz-bank.json');
+const bank=JSON.parse(require('fs').readFileSync(path.join(config.bankPath?path.resolve(root,config.bankPath):root+'/data/quiz-bank.json'),'utf8'));
 let ok=0, fail=0;
 for(const v of Object.values(bank.chapter||{})){
   const shuffled=[...v.options].reverse();

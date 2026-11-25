@@ -247,6 +247,8 @@ async function loadConfig() {
   try {
     const r = await api('/api/config');
     const c = r.config;
+    $('adapter').value = c.adapter || 'zhihuishu';
+    $('studyUrl').value = c.studyUrl || '';
     $('school').value = c.school || '';
     $('speed').value = String(c.speed || 1);
     $('account').value = c.account || '';
@@ -270,6 +272,8 @@ async function loadConfig() {
 
 async function saveConfig() {
   const body = {
+    adapter: $('adapter').value || 'zhihuishu',
+    studyUrl: $('studyUrl').value.trim(),
     school: $('school').value.trim(),
     speed: Number($('speed').value) || 1,
     account: $('account').value.trim(),

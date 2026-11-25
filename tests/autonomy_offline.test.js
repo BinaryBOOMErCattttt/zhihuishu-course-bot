@@ -3,7 +3,7 @@
 const path=require('path');
 const root=path.resolve(__dirname,'..');
 const {Bot}=require(path.join(root,'lib/bot.js'));
-const cfg=JSON.parse(require('fs').readFileSync(path.join(root,'config.json'),'utf8'));
+let cfg={};try{cfg=JSON.parse(require('fs').readFileSync(path.join(root,'config.json'),'utf8'));}catch{}
 // 断掉模型：指向不可达地址 + 空 key
 const dead={...cfg, apiKey:'', baseUrl:'http://127.0.0.1:9/v1'};
 const bot=new Bot({rootDir:root, config:dead, state:{completed:[],forcePending:[]}, onEvent:()=>{}});
